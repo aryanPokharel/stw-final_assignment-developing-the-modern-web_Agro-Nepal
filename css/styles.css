@@ -75,7 +75,7 @@ body{
     box-sizing: border-box;
 }
 #container-A{
-    background-image: url("container-A-bg.jpg");
+    background-image: url("../images/container-A-bg.jpg");
     background-attachment: fixed;
     background-size: 100% 100%;
     text-align: center;
@@ -92,7 +92,7 @@ body{
     word-spacing: 3px;
 }
 #container-B-1{
-    background-image: url("container-B-1-bg.jpg");
+    background-image: url("../images/container-B-1-bg.jpg");
     width: 60%;
     height: 100%;
     box-sizing: border-box;
@@ -149,7 +149,7 @@ body{
     box-sizing: border-box;
 }
 #container-C-1{
-    background-image: url("offers-1.png");
+    background-image: url("/images/offers-1.png");
     background-size:100% 100% ;
     float: left;
 }
@@ -157,7 +157,7 @@ body{
     float: left;
 }
 #container-C-3{
-    background-image: url("discount-1.png");
+    background-image: url("/images/discount-1.png");
     background-size: 100% 100%;
     float: right;
 }
