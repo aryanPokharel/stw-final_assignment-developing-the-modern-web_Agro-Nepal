@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedbacks</title>
+
+    <style>
+        body{
+            background-color: darkgrey;
+            height: 100%;
+            border-radius: 20px;
+            
+        }
+        form{
+            
+            margin: 5px;
+            border: 20px;
+            
+        }
+        .main-container{
+           
+            height: 400px;
+            margin-top: 10%;
+            border-radius: 20px;
+        }
+
+        .form-container{
+            width: 55%;
+            height: 100%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            box-sizing: border-box;
+            float: left;
+            overflow: hidden;
+            padding-top: 70px;
+            background-image: url("shades-of-grey.png");
+            
+        }
+        .img-container{
+            background-image: url("feedbacks.png");
+            width: 45%;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-sizing: border-box;
+            float: right;
+            height: 100%;
+            background-size: cover;
+            overflow: hidden;
+        }
+        
+        .feedbacks-group{
+            padding: 5px 20px;
+            margin-top: 5px;
+        }
+        .feedbacks-group input {
+            display: block;
+            width: 100%;
+            text-align-last: center;
+            background-color: white;
+            color: black;
+        }
+        .feedbacks-group textarea{
+            width: 100%;
+            height: 100px;
+            display: block;
+            text-align-last: center;
+        }
+        
+        .button-section input{
+            
+            background-color: darkgrey;
+            width: 20%;
+            height: 30px;
+            border-radius: 40px;
+            margin: 15px 10%;
+            float: left;
+            box-sizing: border-box;
+
+        }
+
+        
+        
+        .button:hover{
+            background-color: darkgreen;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="main-container">
+
+        <div class="form-container">
+            <h2 style="margin-top: -40px; margin-left: 24%; color: whitesmoke;">Feel Free To Give Us A Feedback!</h2>
+            <form>
+
+                    <div class="feedbacks-group">
+                        <label>Name:</label>
+                        <input type="text" name="name">
+                    </div>
+
+                    <div class="feedbacks-group">
+                        <label>Email:</label>
+                        <input type="text" name="email">
+                    </div>
+
+                    <div class="feedbacks-group">
+                        <label>Message:</label>
+                        <textarea name="message"></textarea>
+                    </div>
+
+                    <div class="button-section">
+                        <input class="button" type="submit" value="Submit" name="">
+                        <input class="button" type="reset" value="Reset" name="">
+                    </div>
+                
+            </form>
+        </div>
+        
+        <div class="img-container">
+            
+        </div>
+
+    </div>
+</body>
+</html>
