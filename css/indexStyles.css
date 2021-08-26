@@ -93,8 +93,9 @@ body{
 }
 #container-B-1{
     background-image: url("../images/container-B-1-bg.jpg");
-    width: 60%;
+    width: 55%;
     height: 100%;
+    background-size:100% 100%;
     box-sizing: border-box;
     display: inline-block;
     float: left;
@@ -102,7 +103,7 @@ body{
 }
 #container-B-2{
     background-color: grey;
-    width: 40%;
+    width: 45%;
     height: 100%;
     box-sizing: border-box;
     display: inline-block;
@@ -149,7 +150,7 @@ body{
     box-sizing: border-box;
 }
 #container-C-1{
-    background-image: url("/images/offers-1.png");
+    background-image: url("../images/offers-1.png");
     background-size:100% 100% ;
     float: left;
 }
@@ -157,7 +158,7 @@ body{
     float: left;
 }
 #container-C-3{
-    background-image: url("/images/discount-1.png");
+    background-image: url("../images/discount-1.png");
     background-size: 100% 100%;
     float: right;
 }
