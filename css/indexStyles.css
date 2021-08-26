@@ -93,7 +93,7 @@ body{
 }
 #container-B-1{
     background-image: url("../images/container-B-1-bg.jpg");
-    width: 55%;
+    width: 60%;
     height: 100%;
     background-size:100% 100%;
     box-sizing: border-box;
@@ -101,9 +101,11 @@ body{
     float: left;
     
 }
+
+
 #container-B-2{
     background-color: grey;
-    width: 45%;
+    width: 40%;
     height: 100%;
     box-sizing: border-box;
     display: inline-block;
@@ -126,6 +128,9 @@ body{
     word-spacing: 8px;
     color: yellow;
 }
+
+
+
 #container-B-2 button{
     width: 20%;
     height: 5%;
@@ -156,11 +161,44 @@ body{
 }
 #container-C-2{
     float: left;
+    text-align: center;
+    font-size: 25px;
+    overflow: hidden;
 }
+#container-C-2-button{
+    border-radius: 15px;
+    height: 8%;
+    width: 20%;
+    background-color: lightblue;
+    color: darkblue;
+    
+}
+
+#container-C-2-button:hover{
+    width: 25%;
+    height: 12%;
+    transition: 180ms;
+    
+}
+
+#container-C-2-button a{
+    text-decoration: none;
+}
+
 #container-C-3{
     background-image: url("../images/discount-1.png");
     background-size: 100% 100%;
     float: right;
+}
+.footer{
+    background-color: rgb(54, 54, 54);
+    color: white;
+    text-align: center;
+    margin: 0px;
+    border: rgb(54, 54, 54) solid 2px;
+}
+.footer h2{
+    
 }
     
 
