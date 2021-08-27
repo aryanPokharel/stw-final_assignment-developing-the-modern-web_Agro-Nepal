@@ -71,7 +71,7 @@ body{
     height: 700px;
     width: 100%;
     background-color: red;
-    border: solid yellow 5px;
+    border: none;
     box-sizing: border-box;
 }
 #container-A{
