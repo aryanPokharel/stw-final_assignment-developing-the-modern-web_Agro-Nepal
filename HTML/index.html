@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="../css/indexStyles.css" type="css/text">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="styles.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    
     <title>Bootstrap Website</title>
 </head>
 <body>
@@ -17,8 +20,8 @@
     background-image: url('../images/navbar-background.png');
   ">
         <div class="container">
-            <a href="index.html" class="navbar-brand">Agro Nepal</a>
-
+            <a href="index.html" class="navbar-brand">AGRO NEPAL</a>
+ 
             <button 
             class="navbar-togler bg-black" 
             type="button" 
@@ -61,7 +64,7 @@
                         This organisation solves problems of Nepalese agriculture by understanding farmers' 
                         problems and takes necessary steps to solve those problems.
                     </p>
-                    <button class="btn btn-primary btn-lg">Join Us</button>
+                    <button class="btn btn-primary btn-lg rounded">Join Us</button>
                 </div>
                 <img class="img-fluid w-50 d-none d-sm-block" src="../images/img-1.svg" alt="">
             </div>
@@ -70,7 +73,7 @@
     </section>
 
     <!--Boxes-->
-    <section class="p-5 bg-light">
+    <section class="p-5 bg-light bg-image" style="background-image: url(../images/farm-way.jpg); background-attachment: fixed;">
         <div class="container ">
             <div class="row">
                 <div class="col-md text-center">
@@ -85,7 +88,7 @@
                             <p class="card-text">
                                 Explore our store and fill your bucket list with exclusive items for your agro farms.
                             </p>
-                            <a href="#" class="btn btn-secondary">Read More</a>
+                            <a href="#" id="readmorebtn" class="btn btn-secondary" style="">Read More</a>
                             
                         </div>
                     </div>
@@ -93,7 +96,7 @@
 
                 <div class="col-md text-center">
                     <div class="card bg-secondary text-dark">
-                        <div class="card-body text-center">
+                        <div class="card-body text-center rounded-lg">
                             <div class="h1 mb-3">
                                 <i class="bi bi-whatsapp"></i>
                             </div>
@@ -134,10 +137,10 @@
     <section class="p-5 bg-secondary text-white">
         <div class="row align-items-center justify-content-between text-center">
             <div class="col-md">
-                <img src="../images/learn-agriculture.jpeg" alt="" class="img-fluid width-100%" alt="">
+                <img src="../images/learn-agriculture.jpeg" alt="" class="img-fluid width-100% rounded-circle" alt="">
             </div>
-            <div class="col-md p-5 mt-4">
-                <h2>Redifining Nepalese Agriculture</h2>
+            <div class="col-md p-5 mt-4" style="border-left:darkblue solid;">
+                <h2><span class="text-primary">Redifining</span> <span class="text-warning">Nepalese</span> <span class="text-primary">Agriculture</span></h2>
 
                 
                 <p class="lead text-center">Agro Nepal aims to and has been working on its misson
@@ -160,7 +163,7 @@
         <div class="row align-items-center justify-content-between">
             
             <div class="col-md p-5 mt-4">
-                <h2>Learn about Agriculture</h2>
+                <h2 class="fw-bold">Learn about Agriculture</h2>
 
 
                 <p class="lead">Nepal has a huge potential to be the agricultural powerhouse of not only Asia, but the world as a whole. 
@@ -174,14 +177,14 @@
 
             </div>
             <div class="col-md">
-                <img src="../images/fourth-section.jpg" alt="" class="img-fluid" alt="">
+                <img src="../images/fourth-section.jpg" alt="" class="img-fluid rounded-md" alt="">
             </div>
         </div>
     </section>
     <!--Question Accordion-->
     <section id="questions" class="p-5 bg-success">
         <div class="container">
-            <h2 class="text-center mb-3">Frequently Asked Questions</h2>
+            <h2 class="text-center mb-3"><span class="text-danger">F</span>requently <span class="text-primary">A</span>sked <span class="text-warning">Q</span>uestions</h2>
             <div class="accordion accordion-flush mb-4" id="questions">
 
                 <!--Question -1 -->
@@ -249,7 +252,7 @@
                       </button>
                     </h2>
                     <div id="question-four" class="accordion-collapse collapse" data-bs-parent="#questions">
-                      <div class="accordion-body bg-info">
+                      <div class="accordion-body bg-primary">
                           Yes, we provide technical support to any of our needy followers. We install any tech bought
                           from our stores free of charge into your farms. We provide free technical support for up to 1
                           year of purchase on any of those techs.
@@ -269,7 +272,7 @@
                       </button>
                     </h2>
                     <div id="question-five" class="accordion-collapse collapse" data-bs-parent="#questions">
-                      <div class="accordion-body">
+                      <div class="accordion-body bg-info">
                           At present moment, Agro Nepal has been working solely. However, we can expect local governments and 
                           some volunteering organisations working in remote parts of the country to work hand in hand with us. 
                           We aim to work independently as far as practicable.
@@ -277,18 +280,19 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </section>
 
     <!--Don't miss section-->
-    <section class="p-5 bg-secondary">
-        <div class="container bg-secondary bg-secondary text-light">
-            <h2 class="text-center">*DONT MISS THESE*</h2>
+    <section class="p-5 bg-secondary bg-image" style="
+    background-image: url('../images/farms.jpg'); background-attachment: fixed;"> 
+        <div class="container text-light">
+            <h2 class="text-center text-warning">*<span class="text-danger">DONT MISS THESE</span>*</h2>
             <div class="row g-4 justify-content-between">
 
 
-                <div class="col-md-6 col-lg-3 py-5 mt-5">
-                    <div class="card bg-dark text-light">
+                <div class="col-md-6 col-lg-3 py-5 mt-5" >
+                    <div class="card bg-dark text-light" >
                         <div class="card-body text-center">
                             <img 
                             src="../images/market-ideas.jpg" 
@@ -298,7 +302,7 @@
                             <p class="card-text p-2">Get a brief insight about the present market condition and the 
                                 prices of various agricultural produce.
                             </p>
-                            <button class="bg-danger rounded-circle text-light">Check Items</button>
+                            <button class="bg-danger rounded-circle text-light p-3" >Check Items</button>
                         </div>
                     </div>
                 </div>
@@ -313,7 +317,7 @@
                             <h3 class="card-title mb-3">Buy/Sell Products</h3>
                             <p class="card-text p-2"> Sell your produce or buy someone's produce at the best price through us. We provide the best quality with guarantee.
                             </p>
-                            <button class="bg-primary rounded-circle text-light"> Check It Out </button>
+                            <button class="bg-primary rounded-circle text-light p-3"> Check It Out </button>
                         </div>
                     </div>
                 </div>
@@ -330,7 +334,7 @@
                                 Hire available automobiles or tools at the best rate so that you can overcome your one 
                                 time need. 
                             </p>
-                            <button class="bg-warning rounded-circle text-light">Gear It Up</button>
+                            <button class="bg-warning rounded-circle text-light p-3">Gear It Up</button>
                         </div>
                     </div>
                 </div>
@@ -347,7 +351,7 @@
                                 Hire a handful of farmers to work for you or work in a needy farmer's farm to help each other out and 
                                 earn a few bucks! 
                             </p>
-                            <button class="bg-success rounded-circle text-light">Partner Up</button>
+                            <button class="bg-success rounded-circle text-light p-3">Partner Up</button>
                         </div>
                     </div>
                 </div>
@@ -358,28 +362,28 @@
     </section>
 
     <!--Contact and map-->
-    <section class="p-5 ">
+    <section class="p-5 bg-image" style="background-image: url(../images/wall.jpg);">
         <div class="container ">
             <div class="row g-4 ">
                 <div class="col-md">
-                    <h2 class="text-center mt-5">
+                    <h2 class="text-center mt-5 pt-5 text-light">
                         Contact Info
                     </h2>
-                    <ul class="list-group list-group-flush lead mt-4 pt-4">
-                        <li class="list-group-item">
+                    <ul class="list-group list-group-flush lead mt-3 pt-3">
+                        <li class="list-group-item rounded rounded-lg mt-2">
                             <span class="fw-bold">Main Location:</span> Dharan Clock Tower
                         </li>
 
-                        <li class="list-group-item">
-                            <span class="fw-bold">Developer Email:</span> aryanpokharel417@gmail.com
+                        <li class="list-group-item rounded rounded-lg mt-2">
+                            <span class="fw-bold">Our Email:</span> agronepal@gmail.com
                         </li>
 
-                        <li class="list-group-item">
+                        <li class="list-group-item rounded rounded-lg mt-2">
                             <span class="fw-bold">Phone Number:</span> 9876543210
                         </li>
 
-                        <li class="list-group-item">
-                            <span class="fw-bold">Main Location:</span> Dharan Clock Tower
+                        <li class="list-group-item rounded rounded-lg mt-2">
+                            <span class="fw-bold">Board Name:</span> Agro Nepal Office
                         </li>
                     </ul>
                 </div>
@@ -403,7 +407,7 @@
     <!--Footer-->
     <footer class="p-5 bg-dark text-white text-center position-relative">
         <div class="container">
-            <p class="lead">Copyright &copy; 2021 Aryan Pokharel</p>
+            <p class="lead">Copyright &copy; 2021 Agro Nepal</p>
             <a href="#" class="position-absolute bottom-0 end-0 p-5">
                 <i class="bi bi-arrow-up-circle h1"></i>
             </a>
