@@ -3,3 +3,21 @@
     background-color: brown;
     color: white;
 }
+
+.card-body:hover{
+    background-color: grey;
+    border-radius: 40px;
+}
+.card:hover{
+    border-radius: 40px;
+}
+.col-md{
+    border-radius: 40px;
+}
+#dontMiss1, #dontMiss2,#dontMiss3,#dontMiss4{
+    border-radius: 40px;
+}
+button:hover{
+    background-color: crimson;
+}
+
