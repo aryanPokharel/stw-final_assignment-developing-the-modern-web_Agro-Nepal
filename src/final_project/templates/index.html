@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="../css/indexStyles.css" type="css/text">
 
-    <link type="text/css" rel="stylesheet" href="{% static '../css/indexStyles.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static '/css/indexStyles.css' %}">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="styles.css">
@@ -21,7 +21,7 @@
 <body>
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg bg-image navbar-dark py-3 fixed-top" style="
-    background-image: url('../images/navbar-background.png');
+    background-image: url('{% static '/images/navbar-background.png' %}');
   ">
         <div class="container">
             <a href="index.html" class="navbar-brand">AGRO NEPAL</a>
@@ -70,7 +70,7 @@
                     </p>
                     <button class="btn btn-primary btn-lg rounded">Join Us</button>
                 </div>
-                <img class="img-fluid w-50 d-none d-sm-block" src="../images/img-1.svg" alt="">
+                <img class="img-fluid w-50 d-none d-sm-block" src="{% static '/images/img-1.svg' %}" alt="">
             </div>
         </div>
 
@@ -141,7 +141,7 @@
     <section class="p-5 bg-secondary text-white">
         <div class="row align-items-center justify-content-between text-center">
             <div class="col-md">
-                <img src="../images/learn-agriculture.jpeg" alt="" class="img-fluid width-100% rounded-circle" alt="">
+                <img src="{% static '/images/learn-agriculture.jpeg' %}" alt="" class="img-fluid width-100% rounded-circle" alt="">
             </div>
             <div class="col-md p-5 mt-4" style="border-left:darkblue solid;">
                 <h2><span class="text-primary">Redifining</span> <span class="text-warning">Nepalese</span> <span class="text-primary">Agriculture</span></h2>
@@ -181,7 +181,7 @@
 
             </div>
             <div class="col-md">
-                <img src="../images/fourth-section.jpg" alt="" class="img-fluid rounded-md" alt="">
+                <img src="{% static '/images/fourth-section.jpg' %}" alt="" class="img-fluid rounded-md" alt="">
             </div>
         </div>
     </section>
@@ -299,7 +299,7 @@
                     <div class="card bg-dark text-light" id="dontMiss1">
                         <div  class="card-body text-center">
                             <img 
-                            src="../images/market-ideas.jpg" 
+                            src="{% static '/images/market-ideas.jpg' %}"
                             class="img-fluid rounded-circle mb-3" 
                             alt="">
                             <h3 class="card-title mb-3">Market Ideas</h3>
@@ -315,7 +315,7 @@
                     <div class="card bg-dark text-light" id="dontMiss2">
                         <div class="card-body text-center">
                             <img 
-                            src="../images/buy-sell.jpg" 
+                            src="{% static '/images/buy-sell.jpg' %}"
                             class="img-fluid rounded-circle mb-3" 
                             alt="">
                             <h3 class="card-title mb-3">Buy/Sell Products</h3>
@@ -330,7 +330,7 @@
                     <div class="card bg-dark text-light" id="dontMiss3">
                         <div class="card-body text-center">
                             <img 
-                            src="../images/automobiles.JPG" 
+                            src="{% static '/images/automobiles.JPG' %}"
                             class="img-fluid rounded-circle mb-3" 
                             alt="">
                             <h3 class="card-title mb-3">Hire Automobiles</h3>
@@ -347,7 +347,7 @@
                     <div class="card bg-dark text-light" id="dontMiss4">
                         <div class="card-body text-center">
                             <img 
-                            src="../images/farmers.jpg" 
+                            src="{% static '/images/farmers.jpg' %}"
                             class="img-fluid rounded-circle mb-3" 
                             alt="">
                             <h3 class="card-title mb-3">Join/Hire Farmers</h3>
