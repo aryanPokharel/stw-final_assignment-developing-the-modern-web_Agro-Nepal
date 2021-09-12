@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from home.views import home_view, feedbacks_view, aboutUs_view, joinus_view, buysell_view, market_view, learn_view, automobiles_view, farmers_view
-from workers.views import join_worker, joinform_view
+from workers.views import join_worker, joinform_view, updateworker_view
+from automobiles.views import automobile_view, postautomobile_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +31,9 @@ urlpatterns = [
     path('automobiles.html', automobiles_view),
     path('farmer.html', join_worker),
     path('joinform.html', joinform_view),
+    path('update_form/<str:pk>/', updateworker_view, name='update_form'),
+    path('automobile.html', automobile_view),
+    path('postautomobile.html', postautomobile_view),
+
+
 ]

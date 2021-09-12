@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     ##own apps
     'home',
     'workers',
+    'automobiles',
 ]
 
 MIDDLEWARE = [
@@ -128,7 +129,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')

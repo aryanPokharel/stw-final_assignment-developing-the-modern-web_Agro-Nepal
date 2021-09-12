@@ -1,0 +1,17 @@
+body{
+
+    background-color: lime;
+
+}
+.container{
+    margin: 10%;
+    border: blue solid 5px;
+    padding: 0 20%;
+}
+
+
+
+
+.heading{
+    color: red;
+}

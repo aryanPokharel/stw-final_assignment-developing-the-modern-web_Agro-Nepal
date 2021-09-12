@@ -4,11 +4,50 @@
 
 {% block content %}
 
+    <link type="text/css" rel="stylesheet" href="{% static '/css/farmerstyles.css' %}">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+          crossorigin="anonymous">
+
+    <a href='joinform.html'><button>Join as Farmer</button></a>
 
     <h2>Available Workers</h2>
 
-    <a href='joinform.html'><button>Join as Farmer</button></a>
+    <table class="table table-sm table-hover table-success" id="table">
+        <tr class="table-row table-primary">
+            <th class="table-heading">ID</th>
+            <th class="table-heading">Name</th>
+            <th class="table-heading">Email</th>
+            <th class="table-heading">Rate ($)</th>
+            <th class="table-heading">Status</th>
+            <th class="table-heading">Actions</th>
+        </tr>
+
+        {% for worker in workers %}
+            <tr class="table-row">
+                <td class="table-data">{{worker.id}}</td>
+                <td class="table-data">{{worker.name}}</td>
+                <td class="table-data">{{worker.email}}</td>
+                <td class="table-data">{{worker.rate}}</td>
+                {% if worker.status == 'available' %}
+                    <td class="table-data text-success">{{worker.status}}</td>
+                {% else %}
+                    <td class="table-data text-danger">{{worker.status}}</td>
+                {% endif %}
+                <td class="table-data"><a href='joinform.html'><button>Update</button></a><a href='#'><button>Delete</button></a></td>
+            </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+
+
+
+    <a href='updateform.html'><button>Update</button></a>
+
 
 
 {% endblock %}

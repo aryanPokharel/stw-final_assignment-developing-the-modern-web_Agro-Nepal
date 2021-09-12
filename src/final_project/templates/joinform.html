@@ -4,12 +4,18 @@
 
 {% block content %}
 
-<h2>Fill up this form</h2>
-<form>
-    {{form}}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/joinform.css' %}">
 
+<h2 class="heading">We would be glad to have you as a colleague!</h2>
+<h2 class="heading">Fill this form and you're in!</h2>
+<div class="container">
+<form method="GET">{% csrf_token %}
+    {{form.as_p}}
         <input type="submit" name="Submit">
+        <input type="reset" name="Reset">
 </form>
+
+</div>
 
 
 {% endblock %}

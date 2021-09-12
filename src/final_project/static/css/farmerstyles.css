@@ -1,0 +1,18 @@
+
+#table{
+    margin-right: 10%;
+    border-collapse: collapse;
+    border: 5px solid black;
+}
+.table-heading{
+    background-color: blue;
+    color: red;
+    padding: 10px;
+}
+.table-data{
+    background-color: darkgrey;
+
+}
+
+
+

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<h2 class="heading">Let your automobiles get the best possible value!</h2>
+<h2 class="heading">Fill this form and post your automobile for others to use!</h2>
+<div class="container">
+<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+    {{form.as_p}}
+        <input type="submit" name="Submit">
+        <input type="reset" name="Reset">
+</form>
+
+</div>
+
+
+{% endblock %}
