@@ -4,6 +4,8 @@
 
 {% block content %}
 
+
+
     <link type="text/css" rel="stylesheet" href="{% static '/css/farmerstyles.css' %}">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
@@ -30,7 +32,9 @@
                 <td class="table-data">{{worker.name}}</td>
                 <td class="table-data">{{worker.email}}</td>
                 <td class="table-data">{{worker.rate}}</td>
+
                 {% if worker.status == 'available' %}
+
                     <td class="table-data text-success">{{worker.status}}</td>
                 {% else %}
                     <td class="table-data text-danger">{{worker.status}}</td>

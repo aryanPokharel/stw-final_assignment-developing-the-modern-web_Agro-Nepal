@@ -3,113 +3,66 @@
 {% load static %}
 
 {% block content %}
+
+    <link type="text/css" rel="stylesheet" href="{% static '/css/productstyles.css' %}">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-          rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-          crossorigin="anonymous">
+      rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/automobilestyles.css' %}">
 
-    <a href='postautomobile.html'><button>Post an automobile</button></a>
-    <h2> Available Automobiles </h2>
 
-<!--    <table class="table table-sm table-hover table-success" id="table">-->
-<!--        <tr class="table-row table-primary">-->
-<!--            <th class="table-heading">ID</th>-->
-<!--            <th class="table-heading">Name</th>-->
-<!--            <th class="table-heading">Price</th>-->
-<!--            <th class="table-heading">Image</th>-->
-<!--            <th class="table-heading">Description</th>-->
-<!--            <th class="table-heading">Status</th>-->
-<!--            <th class="table-heading">Action</th>-->
-<!--        </tr>-->
-        {% for automobile in automobiles %}
+<a href='postautomobile.html'>
+    <button>Post an automobile</button>
+</a>
+<h2> Available Automobiles </h2>
 
-<!--                <div class="container-div">-->
-<!--                    <div class="imgdiv"><img src="/{{automobile.image}}"></div>-->
-<!--                    <div class="namediv">{{automobile.name}}</div>-->
-<!--                    <div class="pricediv">{{automobile.price}}</div>-->
-<!--                    <div class="statusdiv">-->
+<div id="body">
+{% for automobile in automobiles %}
 
-<!--                        {% if automobile.status == 'available' %}-->
-<!--                            {{automobile.status}}-->
-<!--                        {% else %}-->
-<!--                            {{automobile.status}}-->
-<!--                        {% endif %}-->
+<div class="card-deck" style="width: 25rem;" id="card_deck">
 
-<!--                    </div>-->
-<!--                    <div class="descriptiondiv">{{automobile.description}}</div>-->
-<!--                    <div class="btndiv"><a href='#'><button>Update</button></a><a href='#'><button>Delete</button></a></div>-->
-<!--                </div>-->
+    <img class="card-img-top" src="/{{automobile.image}}" alt="Card image cap" id="card_img">
+    <div class="card-body" id="card_body">
+        <div id="body_1">
+            <h5 class="card-title">{{automobile.name}}</h5>
+        </div>
 
-<!--            <tr class="table-row">-->
-<!--                <td class="table-data">{{automobile.id}}</td>-->
-<!--                <td class="table-data">{{automobile.name}}</td>-->
-<!--                <td class="table-data">{{automobile.price}}</td>-->
-<!--                <td class="table-data" id="imagecell"><img src="/{{automobile.image}}"></td>-->
-<!--                <td class="table-data">{{automobile.description}}</td>-->
-<!--                {% if automobile.status == 'available' %}-->
-<!--                    <td class="table-data text-success">{{automobile.status}}</td>-->
-<!--                {% else %}-->
-<!--                    <td class="table-data text-danger">{{automobile.status}}</td>-->
-<!--                {% endif %}-->
-<!--                <td class="table-data"><a href='#'><button>Update</button></a><a href='#'><button>Delete</button></a></td>-->
-<!--            </tr>-->
+        <div id="body_2">
+            <p class="card-text">{{automobile.description}}</p>
+        </div>
 
-<!--                <div id="card" class="card-md-2 bg-secondary mt-4 mx-5 text-center w-25 p-3 h-30 d-inline-block mh-30" style="width: 18rem; box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2);transition: 0.3s;border: none; ">-->
-<!--                    <img class="card-img-top w-100 h-50 mh-30 img-fluid rounded-circle mb-3" src="/{{automobile.image}}">-->
-<!--                    <div class="card-body text-center">-->
-<!--                      <h5 class="card-title">{{automobile.name}}</h5>-->
-<!--                      <p class="card-text">{{automobile.description}}</p>-->
-<!--                    </div>-->
-<!--                    <ul class="list-group list-group-flush">-->
-<!--                      <li class="list-group-item bg-secondary text-light">Price($): {{automobile.price}}</li>-->
-<!--                      <li class="list-group-item bg-secondary text-light">Status:-->
+        <div id="body_3">
+            <h3>Price($): {{automobile.price}}</h3>
+        </div>
 
-<!--                          {% if automobile.status == 'available' %}<h3 class="text-light fw-bold">-->
-<!--                            {{automobile.status}}-->
-<!--                          </h3>-->
+        <div id="body_4">
+            {% if automobile.status == 'available' %}
+            <h3 class="text-success fw-bold">
+                {{automobile.status}}
+            </h3>
+            {% else %}
+            <h3 class="text-danger fw-bold">
+                {{automobile.status}}
 
-<!--                          {% else %}<h3 class="text-danger fw-bold">-->
-<!--                            {{automobile.status}}-->
-<!--                          {% endif %}-->
-<!--                          </h3>-->
-<!--                      </li>-->
+                {% endif %}
+            </h3>
+        </div>
 
-<!--                    </ul>-->
-<!--                    <div class="card-body">-->
-<!--                        <a href='#' class="card-link"><button>Update</button></a>-->
-<!--                        <a href='#' class="card-link"><button>Delete</button></a>-->
-<!--                    </div>-->
-<!--                </div>-->
+        <div id="body_5">
+            <a href='#'>
+                <button>Update</button>
+            </a>
+            <a href='#'>
+                <button>Delete</button>
+            </a>
+        </div>
 
-                <div class="col-md-6 col-lg-3 py-3" style="display: inline-block;">
-                    <div class="card bg-dark text-light"  id="holder3">
-                        <div class="card-body text-center">
+    </div>
+</div>
 
-                            <img class="card-img-top w-100 h-50 mh-30 img-fluid rounded-circle mb-3" src="/{{automobile.image}}">
-
-                            <h3 class="card-title mb-3">{{automobile.name}}</h3>
-                            <p class="card-text p-2">
-                                {{automobile.description}}
-                            </p>
-                            <h3>Price($): {{automobile.price}}</h3>
-
-                            {% if automobile.status == 'available' %}
-                            <h3 class="text-light fw-bold">
-                            {{automobile.status}}
-                            </h3>
-                            {% else %}
-                            <h3 class="text-danger fw-bold">
-                                {{automobile.status}}
-                            {% endif %}
-                            </h3>
-                            <a href='#' class="card-link"><button>Update</button></a>
-                            <a href='#' class="card-link"><button>Delete</button></a>
-                        </div>
-                    </div>
-                </div>
-
-        {% endfor %}
+{% endfor %}
+</div>
 
 
 {% endblock %}

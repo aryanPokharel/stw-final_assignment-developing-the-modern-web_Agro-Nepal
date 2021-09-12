@@ -1,21 +1,29 @@
 
+#body{
+  background-color: darkgrey;
+  justify-content: space-between;
 
+}
 
 #card_deck{
     border: 5px solid black;
     display: inline-block;
-    margin: 2% 2%;
+    margin: 2% 3%;
     height: 500px;
     overflow: hidden;
-
+    border-radius: 40px;
 }
+#card_body: hover{
+    background-color: green;
+}
+
 #card_img{
     height: 50%;
 }
 
 #card_body{
     height: 50%;
-    background-color: darkgrey;
+    background-color: lightgrey;
     text-align: center;
     margin: none;
 }

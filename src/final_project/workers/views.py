@@ -19,8 +19,8 @@ def join_worker(request):
 def joinform_view(request):
     form = WorkerForm()
 
-    if request.method == 'GET':
-        form = WorkerForm(request.GET)
+    if request.method == 'POST':
+        form = WorkerForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('farmer.html')
