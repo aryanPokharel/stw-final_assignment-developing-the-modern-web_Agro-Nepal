@@ -10,7 +10,21 @@
 <h2 class="heading">Fill this form and post your automobile for others to use!</h2>
 <div class="container">
 <form method="POST" enctype="multipart/form-data">{% csrf_token %}
-    {{form.as_p}}
+<!--{{form.as_p}}-->
+    <label>Automobile Name : </label>
+    {{form.name}}
+    <label>Price : </label>
+    {{form.price}}
+    <hr>
+    <label>Image: </label>
+    {{form.image}}
+    <hr>
+    <label>Description : </label>
+    {{form.description}}
+    <hr>
+    <label>Status : </label>
+    {{form.status}}
+    <hr>
         <input type="submit" name="Submit">
         <input type="reset" name="Reset">
 </form>

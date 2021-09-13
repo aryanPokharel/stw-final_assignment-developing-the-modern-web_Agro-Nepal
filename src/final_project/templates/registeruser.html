@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
+
+<h1>Register as a previliged user of this web App</h1>
+<div class="container">
+    <form>
+
+        <div class="form-group mt-5">
+        <label for="nameinput" class="text-primary">Your Name : </label>
+        <input type="text" class="form-control" id="nameinput" aria-describedby="nameinput" placeholder="Create a Username">
+        <small id="nameHelp" class="form-text text-muted">We shall remember you by this name!</small>
+        </div>
+
+      <div class="form-group mt-5">
+        <label for="usernameinput" class="text-warning">Your Username : </label>
+        <input type="text" class="form-control" id="usernameinput" aria-describedby="emailHelp" placeholder="Create a Username">
+        <small id="usernameHelp" class="form-text text-muted">Make sure that you remember this username!</small>
+      </div>
+      <div class="form-group mt-5">
+        <label for="passwordinput" class="text-danger">Your Password : </label>
+        <input type="password" class="form-control" id="passwordinput" placeholder="Password">
+          <small id="passwordHelp" class="form-text text-muted">Never share your password!</small>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+
+    </form>
+</div>
+
+{% endblock %}
