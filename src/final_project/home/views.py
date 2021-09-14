@@ -27,10 +27,10 @@ def automobiles_view(request, *args, **kwargs):
     return render(request, 'automobiles.html', {})
 
 def farmers_view(request, *args, **kwargs):
-    return render(request, 'farmer.html', {})
+    return render(request, 'workers.html', {})
 
 def products_view(request, *args, **kwargs):
-    return render(request, 'product.html', {})
+    return render(request, 'products.html', {})
 
 
 

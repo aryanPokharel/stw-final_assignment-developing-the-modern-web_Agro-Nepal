@@ -5,7 +5,7 @@ from .models import Worker
 
 # Create your views here.
 
-def join_worker(request):
+def workers_view(request):
     worker = Worker()
     workers = Worker.objects.all()
 
@@ -13,17 +13,18 @@ def join_worker(request):
         'workers': workers,
     }
 
-    return render(request, 'farmer.html', context)
+    return render(request, 'workers.html', context)
 
 
-def joinform_view(request):
+
+def addworker_view(request):
     form = WorkerForm()
 
     if request.method == 'POST':
         form = WorkerForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('farmer.html')
+            return redirect('/workers/')
 
     context = {'form': form}
 

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous">
+
+<h1>Please provide your credentials!</h1>
+<div class="container">
+    <form action="/">
+
+      <div class="form-group mt-5">
+        <label for="username" class="text-warning">Your Username : </label>
+        <input type="text" name="username" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Enter Username">
+
+      </div>
+      <div class="form-group mt-5">
+        <label for="password" class="text-danger">Your Password : </label>
+        <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+
+      </div>
+
+      <button type="submit" class="btn btn-success mt-4">Login</button>
+        <button type="reset" class="btn btn-secondary mt-4">Reset</button>
+
+    </form>
+  <h2>{{given}}</h2>
+</div>
+
+{% endblock %}

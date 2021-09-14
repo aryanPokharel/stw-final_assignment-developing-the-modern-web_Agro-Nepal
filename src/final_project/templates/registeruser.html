@@ -2,6 +2,8 @@
 
 {% load static %}
 
+
+
 {% block content %}
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
@@ -9,30 +11,34 @@
       crossorigin="anonymous">
 
 <h1>Register as a previliged user of this web App</h1>
-<div class="container">
-    <form>
+<div class="container" style="padding: 1% 0% 5% 33%; background-color: cyan;">
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
 
         <div class="form-group mt-5">
         <label for="nameinput" class="text-primary">Your Name : </label>
-        <input type="text" class="form-control" id="nameinput" aria-describedby="nameinput" placeholder="Create a Username">
+            <div>{{form.name}}</div>
         <small id="nameHelp" class="form-text text-muted">We shall remember you by this name!</small>
         </div>
 
       <div class="form-group mt-5">
         <label for="usernameinput" class="text-warning">Your Username : </label>
-        <input type="text" class="form-control" id="usernameinput" aria-describedby="emailHelp" placeholder="Create a Username">
+          <div>{{form.username}}</div>
         <small id="usernameHelp" class="form-text text-muted">Make sure that you remember this username!</small>
       </div>
       <div class="form-group mt-5">
         <label for="passwordinput" class="text-danger">Your Password : </label>
-        <input type="password" class="form-control" id="passwordinput" placeholder="Password">
+          <div>{{form.password}}</div>
           <small id="passwordHelp" class="form-text text-muted">Never share your password!</small>
       </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset" class="btn btn-primary">Reset</button>
+      <button type="submit" class="btn btn-success mt-4">Submit</button>
+        <button type="reset" class="btn btn-secondary mt-4">Reset</button>
 
     </form>
 </div>
+
+
+
+
 
 {% endblock %}

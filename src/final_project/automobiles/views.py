@@ -13,17 +13,17 @@ def automobile_view(request):
         'automobiles': automobiles,
     }
 
-    return render(request, 'automobile.html', context)
+    return render(request, 'automobiles.html', context)
 
 
-def postautomobile_view(request):
+def addautomobile_view(request):
     form = AutomobileForm()
 
     if request.method == 'POST':
         form = AutomobileForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('automobile.html')
+            return redirect('automobiles.html')
 
     context = {
         'form': form

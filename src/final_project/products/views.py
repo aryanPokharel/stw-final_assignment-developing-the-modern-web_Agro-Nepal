@@ -12,9 +12,9 @@ def product_view(request):
         'products': products,
     }
 
-    return render(request, 'product.html', context)
+    return render(request, 'products.html', context)
 
-@login_required
+# @login_required
 def addproduct_view(request):
     form = ProductForm()
 
@@ -22,7 +22,7 @@ def addproduct_view(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('product.html')
+            return redirect('products.html')
 
     context = {
         'form': form
@@ -30,17 +30,15 @@ def addproduct_view(request):
 
     return render(request, 'addproduct.html', context)
 
-def updateproduct_view(request, pk):
-    form = ProductForm()
-    context = {
-        'form': form
-    }
+# def updateproduct_view(request, pk):
+#     form = ProductForm()
+#     context = {
+#         'form': form
+#     }
+#
+#     return render(request, 'updateproduct.html', context)
 
-    return render(request, 'updateproduct.html', context)
 
-def registeruser_view(request):
-    context={}
-    return render(request, 'registeruser.html', context)
 
 
 
