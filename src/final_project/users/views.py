@@ -3,11 +3,14 @@ from .forms import UserForm
 from .models import User
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth import authenticate, login, logout
 from requests import get, post
+from django.contrib.auth.decorators import login_required
+from users.auth import unauthenticated_user, admin_only, user_only
 
 # Create your views here.
 
+@unauthenticated_user
 def userlogin_view(request):
     if request.method == 'POST':
 
@@ -48,6 +51,9 @@ def adduser_view(request):
 
     return render(request, 'registeruser.html', context)
 
-
+@login_required
+def logout_user(request):
+    logout(request)
+    return redirect('/users/')
 
 
