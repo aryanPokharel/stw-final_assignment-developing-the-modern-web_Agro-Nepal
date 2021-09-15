@@ -1,19 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-</head>
-<body>
-    <h2>About Us</h2>
-    <h3>Agro Nepal and its works</h3>
-    <p>
-        Agro Nepal has been working tirelessly to achieve the goal of making Nepal independent in the field of agriculture.
-        We, here at Agro Nepal, wish to achieve independence in agriculture not only in the field production and crop sales but 
-        from the scratch. By this, we mean to say that everything necessary to sustain a large scale agro-industry in Nepal will 
-        be fulfilled by the industries in the country itself. 
-    </p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static '/css/aboutusstyles.css' %}">
+
+<div class="about-section">
+  <h1>AGRO NEPAL</h1>
+  <p>Agro Nepal is a national service corporation, which believes in collectivism to solve national problems.</p>
+  <p>The main goal of Agro Nepal is to uplift the condition of the Nepalese Agriculture. To do this, we have been
+  travelling to rural parts of Nepal, where majority of Nepalese farmers reside, to teach them about modern ways of
+  agriculture and the importance of agriculture in Nepal.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static '/images/team-1.jpg' %}" alt="Aryan" style="width:100%;max-height:80%">
+      <div class="container">
+        <h2>Aryan Pokharel</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Mr.Aryan is the founder and CEO of Agro Nepal.</p>
+        <p>aryanpokharel417@gmai.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static '/images/team-2.jpg' %}" alt="Saugat" style="width:100%;max-height:80%">
+      <div class="container">
+        <h2>Saugat Kunwar</h2>
+        <p class="title">Art Director</p>
+        <p>Mr.Saugat is the Art Director of Agro Nepal.</p>
+        <p>saugatkunwar@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static '/images/team-3.jpg' %}" alt="Manish" style="width:100%;max-height:80%">
+      <div class="container">
+        <h2>Manish Gautam</h2>
+        <p class="title">Designer</p>
+        <p>Mr.Manish is the lead designer here at Agro Nepal.</p>
+        <p>manishgautam@gmai.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
