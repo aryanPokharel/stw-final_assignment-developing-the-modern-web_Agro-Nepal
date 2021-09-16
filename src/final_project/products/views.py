@@ -22,7 +22,7 @@ def addproduct_view(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('products.html')
+            return redirect('/products/')
 
     context = {
         'form': form

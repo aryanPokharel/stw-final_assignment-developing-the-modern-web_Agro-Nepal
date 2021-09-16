@@ -7,4 +7,3 @@ class FeedbackForm(ModelForm):
         model = Feedback
         fields = '__all__'
 
-

@@ -21,4 +21,3 @@ def feedbackpage_view(request):
 
     return render(request, 'feedbacks.html', context)
 
-

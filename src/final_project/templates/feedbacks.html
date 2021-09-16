@@ -11,26 +11,38 @@
     <link rel="stylesheet" type="text/css" href="{% static '/css/feedbacksStyles.css' %}">
 
         <h2 class="text-center">Feedbacks and Querries!</h2>
-<div class="container">
+<div class="container ml-5 px-5">
         <form method="POST" enctype="multipart/form-data">{% csrf_token %}
 
         <label>Your Name : </label>
-        {{form.name}}<hr>
+            <div >{{form.name}}</div>
+            <br><br>
         <label>Email : </label>
-        {{form.email}}
-        <hr>
+            <div>{{form.email}}</div>
+            <br><br>
         <label>Message for us : </label>
-        {{form.message}}
-        <hr>
+            <div>{{form.message}}</div>
+            <br><br>
         <label>Select your remarks : </label>
-        {{form.remarks}}
-        <hr>
+            <div>{{form.remarks}}</div>
+
+            <br><br>
 
         <button type="submit" value="Submit">Submit!</button>
         <button type="reset">Reset</button>
+
+            <div><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value={{form.remarks.0}} ></div>
+            <div><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value={{form.remarks.1}} ></div>
+            <div><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value={{form.remarks.2}} ></div>
+            <div><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value={{form.remarks.3}} ></div>
+            <div><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value={{form.remarks.4}} ></div>
+
 </form>
 
+
+
 </div>
+
     <script src="{% static '/javascript/feedbacks.js' %}"></script>
 
 {% endblock content %}
