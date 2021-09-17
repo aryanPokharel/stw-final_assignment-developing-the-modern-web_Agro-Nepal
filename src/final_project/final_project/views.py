@@ -3,8 +3,11 @@ from products.models import Product
 from automobiles.models import Automobile
 
 def allsaleitems_view(request):
-    products = Product()
-    automobiles = Automobile()
+    product = Product()
+    products = Product.objects.all()
+
+    automobile = Automobile()
+    automobiles = Automobile.objects.all()
     context = {
         'products' : products,
         'automobiles' : automobiles,
@@ -12,3 +15,5 @@ def allsaleitems_view(request):
 
     return render(request, 'allsaleitems.html', context)
 
+def learn_view(request):
+    return render(request, 'learn.html')

@@ -18,6 +18,7 @@ from django.urls import path, include
 from home.views import aboutUs_view, joinus_view, buysell_view, market_view, home_view
 from users.views import adduser_view
 from .views import allsaleitems_view
+from .views import learn_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -37,5 +38,6 @@ urlpatterns = [
     path('automobiles/', include('automobiles.urls')),
     # path('feedbacks/', include('feedbacks.urls')),
     path('allsaleitems/', allsaleitems_view),
+    path('learn/', learn_view),
 
 ]

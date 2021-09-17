@@ -10,26 +10,41 @@
 <h2 class="heading">Fill this form and post your automobile for others to use!</h2>
 <div class="container">
 <form method="POST" enctype="multipart/form-data">{% csrf_token %}
-<!--{{form.as_p}}-->
-    <label>Automobile Name : </label>
-    {{form.name}}
-    <label>Price : </label>
-    {{form.price}}
-    <hr>
-    <label>Image: </label>
-    {{form.image}}
-    <hr>
-    <label>Description : </label>
-    {{form.description}}
-    <hr>
-    <label>Status : </label>
-    {{form.status}}
-    <hr>
-        <input type="submit" name="Submit">
-        <input type="reset" name="Reset">
-</form>
 
+
+<div class="container" style="padding: 1% 0% 5% 33%; background-color: cyan;">
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+        <div class="form-group mt-5">
+        <label for="nameinput" class="text-primary">Automobile Name: </label>
+            <div>{{form.name}}</div>
+        </div>
+
+      <div class="form-group mt-5">
+        <label for="usernameinput" class="text-warning">Price: </label>
+          <div>{{form.price}}</div>
+      </div>
+      <div class="form-group mt-5">
+        <label for="passwordinput" class="text-danger">Image: </label>
+          <div>{{form.image}}</div>
+      </div>
+        <div class="form-group mt-5">
+        <label for="passwordinput" class="text-danger">Description: </label>
+          <div>{{form.description}}</div>
+      </div>
+        <div class="form-group mt-5">
+        <label for="passwordinput" class="text-danger">Status : </label>
+          <div>{{form.status}}</div>
+      </div>
+
+
+
+      <button type="submit" class="btn btn-success mt-4">Submit</button>
+        <button type="reset" class="btn btn-secondary mt-4">Reset</button>
+
+    </form>
 </div>
+
 
 
 {% endblock %}

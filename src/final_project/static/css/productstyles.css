@@ -27,8 +27,8 @@
     text-align: center;
     margin: none;
 }
-a{
-    text-decoration: none;
+a:link {
+  text-decoration: none;
 }
 #body_1{
     height: 10%;

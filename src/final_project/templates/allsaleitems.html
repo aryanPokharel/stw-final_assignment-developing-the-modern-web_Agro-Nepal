@@ -4,104 +4,157 @@
 
 {% block content %}
 
+<link type="text/css" rel="stylesheet" href="{% static '/css/productstyles.css' %}">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous">
 
-<h2>All these items have been put up for sales!</h2>
-   <h2>Available Products</h2>
-{% for product in products %}
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
 
 
-<div class="card-deck" style="width: 25rem;" id="card_deck">
+<h3>
+  Check out our Automobiles and Products
+  <small class="text-muted">Wait for more exclusive items!</small>
+</h3>
+<div class="container container-md bg-black text-center" >
+    <div id="carouselautomobilesControls" class="carousel slide container-lg" data-bs-ride="carousel">
+        <div class="carousel-inner" role="listbox" style="width:100%; height: 100% !important;">
+            {% for automobile in automobiles %}
+            <div class="carousel-item {% if forloop.first %} active {% endif %}">
 
-    <img class="card-img-top" src="/{{product.image}}" alt="Card image cap" id="card_img">
-    <div class="card-body" id="card_body">
-        <div id="body_1">
-            <h5 class="card-title">{{product.name}}</h5>
+
+                <div class="card-deck" style="width: 40rem; height: 40rem;" id="card_deck">
+
+                    <img class="card-img-top" src="/{{automobile.image}}" alt="Card image cap" id="card_img">
+                    <div class="card-body" id="card_body">
+                        <div id="body_1">
+                            <h5 class="card-title">{{automobile.name}}</h5>
+                        </div>
+
+                        <div id="body_2">
+                            <p class="card-text">{{automobile.description}}</p>
+                        </div>
+
+                        <div id="body_3">
+                            <h3>Price($): {{automobile.price}}</h3>
+                        </div>
+
+                        <div id="body_4">
+                            {% if automobile.status == 'available' %}
+                            <h3 class="text-success fw-bold">
+                                {{automobile.status}}
+                            </h3>
+                            {% else %}
+                            <h3 class="text-danger fw-bold">
+                                {{automobile.status}}
+                            </h3>
+                            {% endif %}
+
+                        </div>
+
+                        <div id="body_5">
+                            <a href="#">
+                                <button>Update</button>
+                            </a>
+                            <a href='#'>
+                                <button>Delete</button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselautomobilesControls"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselautomobilesControls"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
 
-        <div id="body_2">
-            <p class="card-text">{{product.description}}</p>
+<h2>Our Products!</h2>
+<div class="container container-md bg-black text-center" >
+    <div id="carouselproductsControls" class="carousel slide container-lg" data-bs-ride="carousel">
+        <div class="carousel-inner" role="listbox" style="width:100%; height: 100% !important;">
+            {% for product in products %}
+            <div class="carousel-item {% if forloop.first %} active {% endif %}">
+
+
+                <div class="card-deck" style="width: 40rem; height: 40rem;" id="card_deck">
+
+                    <img class="card-img-top" src="/{{product.image}}" alt="Card image cap" id="card_img">
+                    <div class="card-body" id="card_body">
+                        <div id="body_1">
+                            <h5 class="card-title">{{product.name}}</h5>
+                        </div>
+
+                        <div id="body_2">
+                            <p class="card-text">{{product.description}}</p>
+                        </div>
+
+                        <div id="body_3">
+                            <h3>Price($): {{product.price}}</h3>
+                        </div>
+
+                        <div id="body_4">
+                            {% if product.status == 'available' %}
+                            <h3 class="text-success fw-bold">
+                                {{product.status}}
+                            </h3>
+                            {% else %}
+                            <h3 class="text-danger fw-bold">
+                                {{product.status}}
+                            </h3>
+                            {% endif %}
+
+                        </div>
+
+                        <div id="body_5">
+                            <a href="#">
+                                <button>Update</button>
+                            </a>
+                            <a href='#'>
+                                <button>Delete</button>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
         </div>
-
-        <div id="body_3">
-            <h3>Price($): {{product.price}}</h3>
-        </div>
-
-        <div id="body_4">
-            {% if product.status == 'available' %}
-        <h3 class="text-success fw-bold">
-            {{product.status}}
-        </h3>
-        {% else %}
-        <h3 class="text-danger fw-bold">
-            {{product.status}}
-
-            {% endif %}
-        </h3>
-        </div>
-
-        <div id="body_5">
-            <a href="#">
-            <button>Update</button>
-        </a>
-        <a href='#'>
-            <button>Delete</button>
-        </a>
-        </div>
-
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselproductsControls"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselproductsControls"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
 
 
-
-{% endfor %}
-
-<h2>Automobiles</h2>
-    {% for automobile in automobiles %}
-
-<div class="card-deck" style="width: 25rem;" id="card_deck">
-
-    <img class="card-img-top" src="/{{automobile.image}}" alt="Card image cap" id="card_img">
-    <div class="card-body fade show" id="card_body">
-        <div id="body_1">
-            <h5 class="card-title">{{automobile.name}}</h5>
-        </div>
-
-        <div id="body_2">
-            <p class="card-text">{{automobile.description}}</p>
-        </div>
-
-        <div id="body_3">
-            <h3>Price($): {{automobile.price}}</h3>
-        </div>
-
-        <div id="body_4">
-            {% if automobile.status == 'available' %}
-            <h3 class="text-success fw-bold">
-                {{automobile.status}}
-            </h3>
-            {% else %}
-            <h3 class="text-danger fw-bold">
-                {{automobile.status}}
-
-                {% endif %}
-            </h3>
-        </div>
-
-        <div id="body_5">
-            <a href='#'>
-                <button>Update</button>
-            </a>
-            <a href='#'>
-                <button>Delete</button>
-            </a>
-        </div>
-
-    </div>
-</div>
-
-{% endfor %}
 
 {% endblock %}
+
