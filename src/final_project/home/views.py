@@ -6,7 +6,7 @@ def home_view(request, *args, **kwargs):
     return render(request, 'index.html', {})
 
 def feedbacks_view(request, *args, **kwargs):
-    return render(request, 'feedbacks.html', {})
+    return render(request, 'remarks.html', {})
 
 def aboutUs_view(request, *args, **kwargs):
     return render(request, 'aboutUs.html', {})

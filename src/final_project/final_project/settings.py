@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'workers',
     'automobiles',
     'products',
-    'users',
-    'feedbacks',
+    'students',
+    'remarks',
 ]
 
 MIDDLEWARE = [

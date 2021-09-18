@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+<link rel="stylesheet" type="text/css" href="{% static '/css/feedbacksStyles.css' %}">
+
+<h2 class="text-center">Feedbacks and Querries!</h2>
+<div class="container ml-5 px-5">
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+
+        <div class="row">
+            <div class="col">
+                <label>Your Name:</label>
+                <input name="name" type="text" class="form-control" placeholder="Full Name">
+            </div>
+            <div class="col">
+                <label>Your Email:</label>
+                <input name="email" type="text" class="form-control" placeholder="Email">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Message for us : </label>
+                <textarea name="message" class="form-control" id="message" rows="3"
+                          placeholder="Some message for us"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="remarksSelector">Remarks:</label>
+            <select class="form-control" name="remarks" id="remarksSelector">
+                <option>Epic</option>
+                <option>Good</option>
+                <option>Fine</option>
+                <option>Bad</option>
+                <option>Pathetic</option>
+                <option>Karnali Province</option>
+                <option>SudurPaschim Province</option>
+            </select>
+        </div>
+        <button type="submit" value="Submit">Submit!</button>
+        <button type="reset">Reset</button>
+    </form>
+
+
+</div>
+
+<script src="{% static '/javascript/feedbacks.js' %}"></script>
+
+{% endblock content %}

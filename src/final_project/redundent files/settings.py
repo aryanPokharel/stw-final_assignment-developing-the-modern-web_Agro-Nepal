@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'automobiles',
     'products',
     'users',
-    'feedbacks',
+    'remarks',
 ]
 
 MIDDLEWARE = [
