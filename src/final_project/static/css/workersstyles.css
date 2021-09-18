@@ -16,6 +16,19 @@
 a:link {
   text-decoration: none;
 }
+#joinworker{
+    display: inline-block;
+    justify-content: right;
+}
+#availableWorkers{
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
 
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+
+}
 
 

@@ -80,8 +80,8 @@
             By 1989 corn production had increased to over 1 million tons.</p>
     </div>
     <!--    Photo Gallery   -->
-    <div class="header text-center fw-bold text-danger">Photo Gallery</div>
-    <div class="row">
+    <div class="header text-center fw-bold text-danger border-bottom rounded-bottom border-primary">Photo Gallery</div>
+    <div class="row border-danger border-top rounded-top pt-3 mt-1">
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
             <img
                     src="{% static '/images/gallery-1.jpeg' %}"
@@ -142,21 +142,23 @@
 
 
     <!--    Agriculture video play   -->
-    <h2 class="justify-content-lg-center text-center">A Documentry on Nepalese Agriculture:</h2>
-    <div class="row d-flex justify-content-lg-center container container-lg p-4">
+
+    <div class="row d-flex justify-content-lg-center pt-4 bg-secondary">
+        <h2 class="justify-content-lg-center text-light text-center">A Documentry on Nepalese Agriculture:</h2>
         <div class="col-md-6">
             <video width="109%" height="100%" controls>
                 <source src="{% static '/videos/documentry.mp4' %}" type="video/mp4">
                 <source src="{% static '/images/gallery-6.jpg' %}" type="video/ogg">
-                Your browser does not support the video tag.
+                The video tag might not be supported by your browser!
             </video>
         </div>
     </div>
 
     <!--    Useful youtube video    -->
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-center pt-4 pb-4 bg-secondary">
+        <h2 class="justify-content-lg-center text-light text-center">Modern Farming Techniques:</h2>
         <div class="col-md-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/DoVGbPa0jHw"
+            <iframe width="109%" height="315" src="https://www.youtube.com/embed/DoVGbPa0jHw"
                     title="YouTube video player"
                     frameborder="0" allow="accelerometer; autoplay; clipboard-write;
                 encrypted-media; gyroscope; picture-in-picture"
@@ -166,15 +168,16 @@
         </div>
     </div>
 
+    <div class="containe border-top border-secondary">
+        <h2 class="heading text-danger d-inline mt-3">MoA Report: </h2>
+        <a href="/ministry_report/" target="_blank">
+            <button class="border border-rounded">Read Pdf</button>
+        </a>
 
-    <h2 class="heading text-danger d-inline mt-3">MoA Report: </h2>
-    <a href="/ministry_report/" target="_blank">
-        <button class="border border-rounded">Read Pdf</button>
-    </a>
-
-    <!--   Form section for students -->
-    <h2>If you're interested for our trainings, why not <a class="link-warning;" href="/students/" target="_blank">drop
-        a request</a>?!</h2>
+        <!--   Form section for students -->
+        <h2>If you're interested for our trainings, why not <a class="link-warning;" href="/students/" target="_blank">drop
+            a request</a>?!</h2>
+    </div>
 
 
 </div>
