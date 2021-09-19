@@ -32,7 +32,7 @@ def userlogin_view(request):
             return redirect('automobiles/')
 
     else:
-        return render(request, 'loginuser.html')
+        return render(request, 'insiderlogin.html')
 
 
 
@@ -49,7 +49,7 @@ def adduser_view(request):
         'form': form,
     }
 
-    return render(request, 'registeruser.html', context)
+    return render(request, 'insiderregister.html', context)
 
 @login_required
 def logout_user(request):

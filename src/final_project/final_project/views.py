@@ -18,11 +18,12 @@ def allsaleitems_view(request):
     automobile = Automobile()
     automobiles = Automobile.objects.all()
     context = {
-        'products' : products,
-        'automobiles' : automobiles,
+        'products': products,
+        'automobiles': automobiles,
     }
 
     return render(request, 'allsaleitems.html', context)
+
 
 def learn_view(request):
     return render(request, 'learn.html')
