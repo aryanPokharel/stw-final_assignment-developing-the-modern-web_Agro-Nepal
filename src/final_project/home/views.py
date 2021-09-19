@@ -15,7 +15,7 @@ def joinus_view(request, *args, **kwargs):
     return render(request, 'joinus.html', {})
 
 def buysell_view(request, *args, **kwargs):
-    return render(request, 'buysell.html', {})
+    return render(request, 'bucketlist.html', {})
 
 def market_view(request, *args, **kwargs):
     return render(request, 'market.html', {})

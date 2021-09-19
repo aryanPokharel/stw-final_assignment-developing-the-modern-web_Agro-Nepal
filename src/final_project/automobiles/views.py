@@ -9,8 +9,12 @@ def automobile_view(request):
     automobile = Automobile()
     automobiles = Automobile.objects.all()
 
+
+    # hireprice = (5 * automobile.price) / 100
+
     context = {
         'automobiles': automobiles,
+        # 'hireprice': hireprice,
     }
 
     return render(request, 'automobiles.html', context)

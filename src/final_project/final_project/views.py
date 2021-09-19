@@ -27,3 +27,7 @@ def allsaleitems_view(request):
 
 def learn_view(request):
     return render(request, 'learn.html')
+
+
+def bucketlist_view(request):
+    return render(request, 'bucketlist.html')

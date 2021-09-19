@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from home.views import aboutUs_view, joinus_view, buysell_view, market_view, home_view
+from home.views import aboutUs_view, joinus_view, market_view, home_view
 
-from .views import allsaleitems_view
-from .views import learn_view, ministryreport_view
+from .views import allsaleitems_view, bucketlist_view, learn_view, ministryreport_view
 from students.views import showform
 from remarks.views import remarkpage_view
 
@@ -29,7 +28,7 @@ urlpatterns = [
     # path('remarks.html', feedbacks_view),
     path('aboutus.html', aboutUs_view),
     path('joinus.html', joinus_view),
-    path('buysell.html', buysell_view),
+    path('bucketlist/', bucketlist_view),
     path('market.html', market_view),
     path('learn.html', market_view),
 
