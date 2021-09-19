@@ -48,9 +48,19 @@
                     <a href="aboutus.html" class="nav-link text-info">About Us</a>
                 </li>
 
+                {% if user.is_authenticated %}
+                <li class="nav-item mx-1 text-light pt-2">
+                    Hey,{{user.first_name}}
+
+                </li>
+                <li class="nav-item mx-1">
+                    <a href="insiders/logout/" class="nav-link text-success">Log Out</a>
+                </li>
+                {% else %}
                 <li class="nav-item mx-1">
                     <a href="insiders/" class="nav-link text-success">Log In</a>
                 </li>
+                {% endif %}
 
 
             </ul>
@@ -91,7 +101,8 @@
         <div class="row">
             <div class="col-md text-center" id="div2container1">
                 <div class="card bg-dark text-light">
-                    <div class="card-body text-center  rounded-lg" style="transform: scale(1.1);transition: all 5s;overflow: hidden;overflow-inline:initial;">
+                    <div class="card-body text-center  rounded-lg"
+                         style="transform: scale(1.1);transition: all 5s;overflow: hidden;overflow-inline:initial;">
                         <div class="h1 mb-3">
                             <i class="bi bi-bucket"></i>
                         </div>
@@ -109,9 +120,10 @@
             </div>
 
 
-            <div class="col-md text-center" id="div2container2" >
+            <div class="col-md text-center" id="div2container2">
                 <div class="card bg-secondary text-dark">
-                    <div class="card-body text-center rounded-lg" style="transform: scale(1.1);transition: all 5s;overflow: hidden;overflow-inline:initial;">
+                    <div class="card-body text-center rounded-lg"
+                         style="transform: scale(1.1);transition: all 5s;overflow: hidden;overflow-inline:initial;">
                         <div class="h1 mb-3">
                             <i class="bi bi-whatsapp"></i>
                         </div>
@@ -130,7 +142,8 @@
 
             <div class="col-md text-center" id="div2container3">
                 <div class="card bg-dark text-light">
-                    <div class="card-body text-center" style="transform: scale(1.1);transition: all 5s;overflow: hidden;overflow-inline:initial;">
+                    <div class="card-body text-center"
+                         style="transform: scale(1.1);transition: all 5s;overflow: hidden;overflow-inline:initial;">
                         <div class="h1 mb-3">
                             <i class="bi bi-megaphone"></i>
                         </div>
@@ -318,9 +331,9 @@
         <div class="row g-4 justify-content-between">
 
 
-            <div class="col-md-6 col-lg-3 py-5 mt-5" >
-                <div class="card bg-dark text-light" id="holder1" >
-                    <div class="card-body text-center" >
+            <div class="col-md-6 col-lg-3 py-5 mt-5">
+                <div class="card bg-dark text-light" id="holder1">
+                    <div class="card-body text-center">
                         <img
                                 src="{% static '/images/market-ideas.jpg' %}"
                                 class="img-fluid rounded-circle mb-3"
@@ -444,6 +457,10 @@
                         <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style>
                         <a href="https://www.embedgooglemap.net"></a>
                         <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}
+
+
+
+
                         </style>
                     </div>
                 </div>

@@ -61,3 +61,9 @@ def insiderregister_view(request):
         context = {}
 
         return render(request, 'insiderregister.html', context)
+
+def loguout_view(request):
+
+    auth.logout(request)
+    return redirect('/')
+
