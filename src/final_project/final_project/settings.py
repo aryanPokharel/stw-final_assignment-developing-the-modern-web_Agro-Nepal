@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'students',
     'remarks',
     'insiders',
+    'orders',
 ]
 
 MIDDLEWARE = [
