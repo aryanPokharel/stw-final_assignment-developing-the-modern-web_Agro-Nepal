@@ -41,5 +41,6 @@ urlpatterns = [
     path('students/', showform),
     path('remarks/', remarkpage_view),
     path('insiders/', include('insiders.urls')),
+    path('orders/', include('orders.urls')),
 
 ]

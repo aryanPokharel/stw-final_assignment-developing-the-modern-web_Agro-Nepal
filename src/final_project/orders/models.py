@@ -14,3 +14,5 @@ class Order(models.Model):
     customer_email = models.EmailField(max_length=200)
     order_date = models.DateField(auto_now_add=True)
     total_price = models.FloatField(default=0)
+    quantity = models.IntegerField(default=1)
+    remarks = models.TextField(max_length=250, null=True)
